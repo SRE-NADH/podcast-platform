@@ -49,7 +49,7 @@ const unsub = onSnapshot(
         ))
         }
       </div>
-      <p>{podcasts.length==0 && filterPodcast.length===0? "no podcasts available":"podacast not found"}</p>
+      <p>{podcasts.length==0 && filterPodcast.length===0? "no podcasts available": podcasts.length==0 && "podacast not found"}</p>
     </div>
   )
 }
