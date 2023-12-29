@@ -1,0 +1,58 @@
+.custom-audio-player{
+     background-color: rgba(14,2,21, 0.5);
+     display: flex;
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     width: 100vw;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0.5rem;
+     gap: 1rem;
+}
+
+.custom-audio-player img{
+     width: 50px;
+     height: 50px;
+     margin-right: 0.4rem;
+}
+.duration-range{
+ filter: hue-rotate(25deg);
+ width: 100%;
+}
+.duaration-container{
+     display: flex;
+     color: white;
+     gap: .5rem;
+     width: 60%;
+     align-items: center;
+     margin-left: 20px;
+}
+.volume-container{
+     display: flex;
+     gap: 0.5rem;
+     color: white;
+     margin-right: 2rem;
+     align-items: center;
+}
+.volume-container>p,.duaration-container>p{
+     display: flex;
+     align-items: center;
+}
+
+@media screen and (max-width:460px) {
+     .custom-audio-player img{
+          width: 30px;
+          height: 30px;
+          margin-right: 0.4rem;
+     }
+     .custom-audio-player p{
+          font-size: 0.7rem;
+     }
+     .volume-range{
+          width: 50px;
+     } 
+}
+
+
+

@@ -1,0 +1,22 @@
+.custom-input{
+     background-color: var(--theme);
+     color: var(--white);
+     border: 2px solid var( --purple-grey);
+     border-radius: 0.4rem;
+     padding: 1rem;
+     font-size: 1rem;
+     width: 70%;
+     font-weight: 500;
+     margin-bottom: 20px;
+ 
+}
+.custom-input:focus{
+     outline: none;
+     border-color: var(--white);
+}
+.label-input{
+     color: var(--purple-grey);
+}
+.active{
+    border-color: var(--white);
+}

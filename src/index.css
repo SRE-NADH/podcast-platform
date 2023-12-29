@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --theme: #20062e;
+  --blue: #18b2de;
+  --white:#fff;
+   --grey: #d7d7d7;
+   --purple-grey:#8f8297;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: var(--theme);
+}
+input{
+  font-family: 'Inter', sans-serif;
+}
+.input-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.input-wrapper>h1
+{
+  color: var(--white);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.input-wrapper>p{
+  margin-top: 30px;
+  color: var(--purple-grey);
+  margin-bottom: 20px;
+}
+a{
+  text-decoration: none;
+}
+.podcast-card-container{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.podcast-details-header{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-inline:25px;
+  color: var(--purple-grey);
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: 20px;
+}
+.podcast-details-img{
+  background: linear-gradient(
+          177.7deg,
+          rgba(58,129,191,0.3 ) 1.63%,
+          rgba(65,48,90,0.009) 148.18%
+      );
+  display: flex;
+  height: 300px;
+  border-radius: 1rem;
+  margin-inline: 20px;
+  padding: 0.5rem;
+}
+.podcast-details-img>img{
+ width: 100%;
+ border-radius: 1rem;
+}
+.desc{
+  margin-top: 10px;
+  margin-inline: 25px;
+  color: var(--purple-grey);
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+.podcast-details{
+  margin-inline: 30px;
+}
+.episodes{
+  margin-bottom: 80px;
+}
+li{
+  list-style: none;
+}
+
+@media  (max-width:457px) {
+  .links>a{
+      font-size: .7rem;
+  }
+  .gradient{
+     width: 300px;
+    }
+    .podcast-details{
+      font-size: .8rem;
+    }
+    .podcast-details h1{
+      font-size: 1.2rem !important;
+    }
+    .podcast-details-header>p{
+      font-size: 1.2rem !important;
+    }
+    h1{
+      font-size: 1rem;
+    }
+    .logo{
+      width: 20px;
+      height: 20px;
+    }
+    input{
+      font-size: .8rem !important;
+    }
+}
+
+

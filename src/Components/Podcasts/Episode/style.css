@@ -1,0 +1,11 @@
+.episode-desc{
+     margin-top: 10px;
+     margin-left: 20px;
+}
+.episode-desc>p{
+     color: var(--purple-grey);
+     margin-bottom: 20px;
+}
+.episode{
+     margin: 20px;
+}
