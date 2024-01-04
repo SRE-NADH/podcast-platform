@@ -63,7 +63,7 @@ function App() {
           <Route path='/start-podcast' element ={<CreatePodcastPage/>} />
           <Route path='/podcasts' element ={<PodcastsPage/>}/>
           <Route path='/podcast/:id' element={<PodcastDetails/>} />
-          <Route path='/podcast/:id/episode' element={<CreateEpisode/>} />
+          <Route path='/podcast/:id/episode' element={<CreateEpisode />} />
        </Route>
      </Routes>
     </Router>

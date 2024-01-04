@@ -5,9 +5,12 @@ import { auth, db } from '../firebase';
 import { collection, doc, getDoc, onSnapshot, query } from 'firebase/firestore';
 import Episode from '../Components/Podcasts/Episode/Episode';
 import AudioPlayer from '../Components/Podcasts/AudioPlayer/AudioPlayer';
+import { useDispatch } from 'react-redux';
+import { setEditObj } from '../slices/editSlice';
 
 
 function PodcastDetails() {
+  const dispatch = useDispatch();
 const {id} = useParams();
 const [podcast,setPodcast] = useState({});
 const navigate = useNavigate();
@@ -45,7 +48,8 @@ async function getPodcastData(){
      setPodcast(data);
 }
 
-function createEpisode(){
+function createEpisode(){   
+   dispatch(setEditObj(null));
   navigate(`/podcast/${id}/episode`);
 }
 
@@ -60,7 +64,7 @@ function createEpisode(){
      <h1 style={{color:"white",margin:"20px"}}>Episodes</h1>
      <div className='episodes'>
      {episodes.length>0 && episodes.map((item,index)=>(
-        <Episode key={index} title={item.title} audioFile={item.audioFile} index={index+1} desc={item.desc} onClick={(file)=>(setPlayingFile(file))}  />
+        <Episode key={index} episode={item}  index={index+1}  onClick={(file)=>(setPlayingFile(file))}  />
      ))}
      </div>
      {playingFile &&<AudioPlayer file={playingFile} image={podcast.displayImage} />}

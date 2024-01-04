@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import PodcastCard from '../Components/Podcasts/PodcastCard/PodcastCard';
 import { collection, onSnapshot, query } from 'firebase/firestore';
 import { setPodcasts } from '../slices/podcastsSlice';
+import { Link } from 'react-router-dom';
 
 
 const ProfilePage = () => {
@@ -51,6 +52,7 @@ useEffect(()=>{
         ))
         }
     </div>
+    {podcasts.filter((item)=> item.createdBy===user.uid).length===0 && <Link style={{textDecoration:"none",color:"white"}} to={"/start-podcast"}>create your first podcast</Link>}
    </div>
   )
 }

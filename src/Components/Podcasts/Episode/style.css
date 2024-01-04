@@ -1,8 +1,10 @@
 .episode-desc{
      margin-top: 10px;
      margin-left: 20px;
+     display: flex;
+     justify-content: space-between;
 }
-.episode-desc>p{
+.episode-desc p{
      color: var(--purple-grey);
      margin-bottom: 20px;
 }
